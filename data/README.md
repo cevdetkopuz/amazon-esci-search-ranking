@@ -7,3 +7,4 @@ Instead, the dataset is accessed via Google BigQuery.
 
 Dataset source:
 https://github.com/amazon-science/esci-data
+Data is stored and processed in Google BigQuery under the `esci_raw` dataset.
