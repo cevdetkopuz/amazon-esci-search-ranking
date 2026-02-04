@@ -79,3 +79,19 @@ flowchart TD
     style Raw_Data fill:#f9f9f9,stroke:#333,stroke-width:1px
     style ELT_Pipeline fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
     style Consumption fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+
+## Setup & Usage
+
+### 1. Prerequisites
+* **Python 3.9+**
+* **Google Cloud Platform Account** (BigQuery & Cloud Storage enabled)
+* **dbt Core** (with BigQuery adapter)
+
+### 2. Installation
+```bash
+# Clone the repository
+git clone [https://github.com/cevdetkopuz/amazon-esci-search-ranking.git](https://github.com/cevdetkopuz/amazon-esci-search-ranking.git)
+cd amazon-esci-search-ranking
+
+# Install Python dependencies (Transformers, dbt-bigquery, etc.)
+pip install -r requirements.txt
