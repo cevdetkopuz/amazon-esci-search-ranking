@@ -308,9 +308,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- **Amazon Science** - For providing the ESCI dataset
-- **Hugging Face** - For XLM-RoBERTa model and transformers library
-- **dbt Labs** - For modern analytics engineering framework
+- **Amazon Science** - For providing the ESCI dataset.
+- **Hugging Face** - For XLM-RoBERTa model and transformers library.
+- **dbt Labs** - For modern analytics engineering framework.
 
 ---
 
