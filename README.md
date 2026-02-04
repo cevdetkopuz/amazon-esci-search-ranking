@@ -52,3 +52,30 @@ amazon-esci-search-ranking/
 │   └── generate_schema_name.sql # Custom macro for BigQuery dataset schema management
 │
 └── dbt_project.yml         # Main dbt project configuration file
+
+## Technical Architecture
+
+The project follows a **Modern Data Stack** architecture, leveraging Google Cloud Platform for scalability and dbt for modular data transformation.
+
+```mermaid
+flowchart TD
+    subgraph Raw_Data [Data Ingestion]
+        A[("Amazon ESCI Dataset")] -->|Load| B(Google Cloud Storage)
+        B -->|External Table| C[("BigQuery: esci_raw")]
+    end
+
+    subgraph ELT_Pipeline [dbt Analytics Engineering]
+        direction TB
+        C --> D[Staging Layer]
+        D --> E[Intermediate Layer]
+        E --> F[Marts Layer]
+    end
+
+    subgraph Consumption [Downstream Consumers]
+        F -->|Training Data| G["XLM-RoBERTa Model"]
+        F -->|Analytics| H["Tableau Dashboards"]
+    end
+
+    style Raw_Data fill:#f9f9f9,stroke:#333,stroke-width:1px
+    style ELT_Pipeline fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+    style Consumption fill:#fff3e0,stroke:#ff9800,stroke-width:2px
